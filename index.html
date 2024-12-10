@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Poisoning and Environmental Health Practitioners</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <style>
+        :root {
+            --polynesian-blue: #1C52A0;
+            --fern-green: #2F7A3B;
+            --green: #00F300;
+            --black-bean: #330000;
+            --asparagus: #74A83C;
+        }
+
+        body {
+            background: linear-gradient(135deg, rgba(28, 82, 160, 0.1), rgba(47, 122, 59, 0.1));
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: var(--polynesian-blue);
+        }
+
+        .form-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+            padding: 2rem;
+            max-width: 800px;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo-container img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .form-label {
+            color: var(--polynesian-blue);
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background-color: var(--polynesian-blue);
+            border-color: var(--polynesian-blue);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--fern-green);
+            border-color: var(--fern-green);
+        }
+
+        .form-control:focus {
+            border-color: var(--asparagus);
+            box-shadow: 0 0 0 0.25rem rgba(116, 168, 60, 0.25);
+        }
+
+        .invalid-feedback {
+            color: #dc3545;
+        }
+
+        .success-message {
+            display: none;
+            background-color: var(--fern-green);
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-shield-virus"></i> Health Practitioners Portal
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="form-container animate__animated animate__fadeIn">
+            <div class="logo-container">
+                <img src="https://i.ibb.co/QfVKtz1/Whats-App-Image-2024-12-10-at-17-50-05-77ac956e-removebg-preview.png" 
+                     alt="Health Practitioners Logo" 
+                     class="img-fluid">
+            </div>
+
+            <h1 class="text-center mb-4" style="color: var(--polynesian-blue);">
+                FOOD POISONING AND ENVIRONMENTAL HEALTH PRACTITIONERS
+            </h1>
+
+            <form id="contactForm" class="needs-validation" novalidate>
+                <div class="mb-3" data-aos="fade-up">
+                    <label for="fullName" class="form-label">
+                        <i class="fas fa-user"></i> Your Full Name
+                    </label>
+                    <input type="text" class="form-control" id="fullName" required>
+                    <div class="invalid-feedback">
+                        Please enter your full name
+                    </div>
+                </div>
+
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="100">
+                    <label for="email" class="form-label">
+                        <i class="fas fa-envelope"></i> Email Address
+                    </label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="invalid-feedback">
+                        Please enter a valid email address
+                    </div>
+                </div>
+
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="200">
+                    <label for="emailConfirm" class="form-label">
+                        <i class="fas fa-envelope-circle-check"></i> Email Confirmation
+                    </label>
+                    <input type="email" class="form-control" id="emailConfirm" required>
+                    <div class="invalid-feedback">
+                        Emails must match
+                    </div>
+                </div>
+
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="300">
+                    <label for="hiNumber" class="form-label">
+                        <i class="fas fa-id-card"></i> HI Number
+                    </label>
+                    <input type="text" class="form-control" id="hiNumber" required>
+                    <div class="invalid-feedback">
+                        Please enter your HI Number
+                    </div>
+                </div>
+
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="400">
+                    <label for="phone" class="form-label">
+                        <i class="fas fa-phone"></i> Phone Number
+                    </label>
+                    <div class="input-group">
+                        <select class="form-select" id="phoneCode" style="max-width: 200px;">
+                            <option value="+27">South Africa (+27)</option>
+                        </select>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a valid phone number
+                    </div>
+                </div>
+
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="500">
+                    <label for="organization" class="form-label">
+                        <i class="fas fa-building"></i> Organization Name
+                    </label>
+                    <input type="text" class="form-control" id="organization" required>
+                    <div class="invalid-feedback">
+                        Please enter your organization name
+                    </div>
+                </div>
+
+                <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="600">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-paper-plane"></i> Submit and Proceed to Payment
+                    </button>
+                </div>
+            </form>
+
+            <div id="successMessage" class="success-message text-center">
+                <i class="fas fa-check-circle fa-2x mb-2"></i>
+                <h4>Thank you for your submission!</h4>
+                <p>You will be redirected to the payment page shortly...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const email = document.getElementById('email');
+            const emailConfirm = document.getElementById('emailConfirm');
+            const phone = document.getElementById('phone');
+            const successMessage = document.getElementById('successMessage');
+
+            // Email validation regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            // Phone validation regex (South African format)
+            const phoneRegex = /^[0-9]{9}$/;  // Expecting 9 digits after the country code
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                let isValid = true;
+
+                // Validate full name
+                const fullName = document.getElementById('fullName');
+                if (!fullName.value.trim()) {
+                    fullName.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    fullName.classList.remove('is-invalid');
+                }
+
+                // Validate email
+                if (!emailRegex.test(email.value)) {
+                    email.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    email.classList.remove('is-invalid');
+                }
+
+                // Validate email confirmation
+                if (email.value !== emailConfirm.value) {
+                    emailConfirm.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    emailConfirm.classList.remove('is-invalid');
+                }
+
+                // Validate phone number
+                if (!phoneRegex.test(phone.value)) {
+                    phone.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    phone.classList.remove('is-invalid');
+                }
+
+                // Validate HI Number
+                const hiNumber = document.getElementById('hiNumber');
+                if (!hiNumber.value.trim()) {
+                    hiNumber.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    hiNumber.classList.remove('is-invalid');
+                }
+
+                // Validate organization
+                const organization = document.getElementById('organization');
+                if (!organization.value.trim()) {
+                    organization.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    organization.classList.remove('is-invalid');
+                }
+
+                if (isValid) {
+                    // Show success message
+                    successMessage.style.display = 'block';
+                    
+                    // Redirect to PayFast after 2 seconds
+                    setTimeout(() => {
+                        window.location.href = 'https://payf.st/p43r5';
+                    }, 2000);
+                }
+            });
+
+            // Real-time email matching validation
+            emailConfirm.addEventListener('input', function() {
+                if (email.value !== emailConfirm.value) {
+                    emailConfirm.classList.add('is-invalid');
+                } else {
+                    emailConfirm.classList.remove('is-invalid');
+                }
+            });
+
+            // Phone number formatting
+            phone.addEventListener('input', function(e) {
+                // Remove any non-digit characters
+                let value = e.target.value.replace(/\D/g, '');
+                
+                // Limit to 9 digits
+                if (value.length > 9) {
+                    value = value.substr(0, 9);
+                }
+                
+                e.target.value = value;
+            });
+        });
+    </script>
+</body>
+</html>
